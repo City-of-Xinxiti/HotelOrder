@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.xfy.hotelpricecomparison.mapper.JinjiangHotelImageMapper">
+
+    <!-- 根据酒店ID和图片类型查询图片 -->
+    <select id="selectByInnIdAndImageType" resultType="org.xfy.hotelpricecomparison.entity.JinjiangHotelImage">
+        SELECT 
+            id, inn_id, image_des, image_type, image_url, master, 
+            room_type_code, size_type, upload_file_name, language_code, 
+            valid, sort_order, created_at, updated_at
+        FROM jinjiang_hotel_images 
+        WHERE inn_id = #{innId}
+        <if test="imageType != null">
+            AND image_type = #{imageType}
+        </if>
+        <if test="languageCode != null">
+            AND language_code = #{languageCode}
+        </if>
+        AND valid = 1
+        ORDER BY sort_order ASC, created_at DESC
+    </select>
+
+    <!-- 根据酒店ID和房型编码查询图片 -->
+    <select id="selectByInnIdAndRoomType" resultType="org.xfy.hotelpricecomparison.entity.JinjiangHotelImage">
+        SELECT 
+            id, inn_id, image_des, image_type, image_url, master, 
+            room_type_code, size_type, upload_file_name, language_code, 
+            valid, sort_order, created_at, updated_at
+        FROM jinjiang_hotel_images 
+        WHERE inn_id = #{innId}
+        <if test="roomTypeCode != null and roomTypeCode != ''">
+            AND room_type_code = #{roomTypeCode}
+        </if>
+        <if test="languageCode != null">
+            AND language_code = #{languageCode}
+        </if>
+        AND valid = 1
+        ORDER BY sort_order ASC, created_at DESC
+    </select>
+
+    <!-- 根据酒店ID查询主图 -->
+    <select id="selectMasterImagesByInnId" resultType="org.xfy.hotelpricecomparison.entity.JinjiangHotelImage">
+        SELECT 
+            id, inn_id, image_des, image_type, image_url, master, 
+            room_type_code, size_type, upload_file_name, language_code, 
+            valid, sort_order, created_at, updated_at
+        FROM jinjiang_hotel_images 
+        WHERE inn_id = #{innId}
+        AND master = 1
+        <if test="languageCode != null">
+            AND language_code = #{languageCode}
+        </if>
+        AND valid = 1
+        ORDER BY sort_order ASC, created_at DESC
+    </select>
+
+</mapper>

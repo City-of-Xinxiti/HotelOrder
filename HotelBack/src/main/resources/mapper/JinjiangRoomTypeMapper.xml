@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.xfy.hotelpricecomparison.mapper.JinjiangRoomTypeMapper">
+
+    <!-- 根据酒店ID查询房型列表 -->
+    <select id="selectByInnId" resultType="org.xfy.hotelpricecomparison.entity.JinjiangRoomType">
+        SELECT * FROM jinjiang_room_types WHERE inn_id = #{innId} AND valid = 1
+    </select>
+
+    <!-- 根据房型编码查询房型 -->
+    <select id="selectByRoomTypeCode" resultType="org.xfy.hotelpricecomparison.entity.JinjiangRoomType">
+        SELECT * FROM jinjiang_room_types WHERE room_type_code = #{roomTypeCode} AND valid = 1
+    </select>
+
+    <!-- 根据酒店ID和房型编码查询房型 -->
+    <select id="selectByInnIdAndRoomTypeCode" resultType="org.xfy.hotelpricecomparison.entity.JinjiangRoomType">
+        SELECT * FROM jinjiang_room_types 
+        WHERE inn_id = #{innId} AND room_type_code = #{roomTypeCode} AND valid = 1
+    </select>
+
+    <!-- 查询所有房型 -->
+    <select id="selectAllRoomTypes" resultType="org.xfy.hotelpricecomparison.entity.JinjiangRoomType">
+        SELECT * FROM jinjiang_room_types WHERE valid = 1
+    </select>
+
+</mapper>

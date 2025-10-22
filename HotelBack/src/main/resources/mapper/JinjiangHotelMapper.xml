@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.xfy.hotelpricecomparison.mapper.JinjiangHotelMapper">
+
+    <!-- 根据酒店ID查询酒店 -->
+    <select id="selectByInnId" resultType="org.xfy.hotelpricecomparison.entity.JinjiangHotel">
+        SELECT * FROM jinjiang_hotels WHERE inn_id = #{innId}
+    </select>
+
+    <!-- 根据城市编码查询酒店列表 -->
+    <select id="selectByCityCode" resultType="org.xfy.hotelpricecomparison.entity.JinjiangHotel">
+        SELECT * FROM jinjiang_hotels WHERE city_code = #{cityCode}
+    </select>
+
+    <!-- 根据品牌编码查询酒店列表 -->
+    <select id="selectByBrandCode" resultType="org.xfy.hotelpricecomparison.entity.JinjiangHotel">
+        SELECT * FROM jinjiang_hotels WHERE brand_code = #{brandCode}
+    </select>
+
+    <!-- 根据酒店名称模糊查询 -->
+    <select id="selectByNameLike" resultType="org.xfy.hotelpricecomparison.entity.JinjiangHotel">
+        SELECT * FROM jinjiang_hotels WHERE inn_name LIKE CONCAT('%', #{hotelName}, '%')
+    </select>
+
+    <!-- 根据状态查询酒店列表 -->
+    <select id="selectByStatus" resultType="org.xfy.hotelpricecomparison.entity.JinjiangHotel">
+        SELECT * FROM jinjiang_hotels WHERE status = #{status}
+    </select>
+
+    <!-- 根据语言类型查询酒店列表 -->
+    <select id="selectByLanguageCode" resultType="org.xfy.hotelpricecomparison.entity.JinjiangHotel">
+        SELECT * FROM jinjiang_hotels WHERE language_code = #{languageCode}
+    </select>
+
+    <!-- 批量插入酒店 -->
+    <insert id="batchInsert" parameterType="java.util.List">
+        INSERT INTO jinjiang_hotels (
+            inn_id, inn_name, inn_name_en, inn_short_name, inn_name_pin_yin, address,
+            city_code, city_name, district_code, district_name, country_code,
+            inn_phone, inn_email, description, policy, guide, check_in_time, check_out_time,
+            inn_level, star_type, business_type, inn_type, status, valid, book_flag,
+            allow_minors, pets, restaurant, support_foreign_guest, require_eng_name,
+            certificate_type, settlement_currency, source_type, open_date, close_date,
+            decoration_date, is_jin_rewards, brand_code, language_code, created_at, updated_at
+        ) VALUES
+        <foreach collection="hotels" item="hotel" separator=",">
+            (#{hotel.innId}, #{hotel.innName}, #{hotel.innNameEn}, #{hotel.innShortName}, #{hotel.innNamePinYin}, #{hotel.address},
+             #{hotel.cityCode}, #{hotel.cityName}, #{hotel.districtCode}, #{hotel.districtName}, #{hotel.countryCode},
+             #{hotel.innPhone}, #{hotel.innEmail}, #{hotel.description}, #{hotel.policy}, #{hotel.guide}, #{hotel.checkInTime}, #{hotel.checkOutTime},
+             #{hotel.innLevel}, #{hotel.starType}, #{hotel.businessType}, #{hotel.innType}, #{hotel.status}, #{hotel.valid}, #{hotel.bookFlag},
+             #{hotel.allowMinors}, #{hotel.pets}, #{hotel.restaurant}, #{hotel.supportForeignGuest}, #{hotel.requireEngName},
+             #{hotel.certificateType}, #{hotel.settlementCurrency}, #{hotel.sourceType}, #{hotel.openDate}, #{hotel.closeDate},
+             #{hotel.decorationDate}, #{hotel.isJinRewards}, #{hotel.brandCode}, #{hotel.languageCode}, #{hotel.createdAt}, #{hotel.updatedAt})
+        </foreach>
+    </insert>
+
+    <!-- 批量更新酒店 -->
+    <update id="batchUpdate" parameterType="java.util.List">
+        <foreach collection="hotels" item="hotel" separator=";">
+            UPDATE jinjiang_hotels
+            SET inn_name = #{hotel.innName}, 
+                inn_name_en = #{hotel.innNameEn}, 
+                inn_short_name = #{hotel.innShortName}, 
+                inn_name_pin_yin = #{hotel.innNamePinYin}, 
+                address = #{hotel.address},
+                city_code = #{hotel.cityCode}, 
+                city_name = #{hotel.cityName}, 
+                district_code = #{hotel.districtCode}, 
+                district_name = #{hotel.districtName}, 
+                country_code = #{hotel.countryCode},
+                inn_phone = #{hotel.innPhone}, 
+                inn_email = #{hotel.innEmail}, 
+                description = #{hotel.description}, 
+                policy = #{hotel.policy}, 
+                guide = #{hotel.guide}, 
+                check_in_time = #{hotel.checkInTime}, 
+                check_out_time = #{hotel.checkOutTime},
+                inn_level = #{hotel.innLevel}, 
+                star_type = #{hotel.starType}, 
+                business_type = #{hotel.businessType}, 
+                inn_type = #{hotel.innType}, 
+                status = #{hotel.status}, 
+                valid = #{hotel.valid}, 
+                book_flag = #{hotel.bookFlag},
+                allow_minors = #{hotel.allowMinors}, 
+                pets = #{hotel.pets}, 
+                restaurant = #{hotel.restaurant}, 
+                support_foreign_guest = #{hotel.supportForeignGuest}, 
+                require_eng_name = #{hotel.requireEngName},
+                certificate_type = #{hotel.certificateType}, 
+                settlement_currency = #{hotel.settlementCurrency}, 
+                source_type = #{hotel.sourceType}, 
+                open_date = #{hotel.openDate}, 
+                close_date = #{hotel.closeDate},
+                decoration_date = #{hotel.decorationDate}, 
+                is_jin_rewards = #{hotel.isJinRewards}, 
+                brand_code = #{hotel.brandCode}, 
+                language_code = #{hotel.languageCode}, 
+                updated_at = #{hotel.updatedAt}
+            WHERE inn_id = #{hotel.innId}
+        </foreach>
+    </update>
+
+    <!-- 查询所有酒店 -->
+    <select id="selectAllHotels" resultType="org.xfy.hotelpricecomparison.entity.JinjiangHotel">
+        SELECT * FROM jinjiang_hotels WHERE valid = 1
+    </select>
+
+</mapper>

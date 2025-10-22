@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.xfy.hotelpricecomparison.mapper.JinjiangBrandMapper">
+
+    <!-- 根据品牌编码查询品牌 -->
+    <select id="selectByBrandCode" resultType="org.xfy.hotelpricecomparison.entity.JinjiangBrand">
+        SELECT * FROM jinjiang_brands WHERE brand_code = #{brandCode}
+    </select>
+
+    <!-- 根据品牌类型查询品牌列表 -->
+    <select id="selectByBrandType" resultType="org.xfy.hotelpricecomparison.entity.JinjiangBrand">
+        SELECT * FROM jinjiang_brands WHERE brand_type = #{brandType}
+    </select>
+
+    <!-- 根据语言类型查询品牌列表 -->
+    <select id="selectByLanguageCode" resultType="org.xfy.hotelpricecomparison.entity.JinjiangBrand">
+        SELECT * FROM jinjiang_brands WHERE language_code = #{languageCode}
+    </select>
+
+    <!-- 根据品牌名称模糊查询 -->
+    <select id="selectByNameLike" resultType="org.xfy.hotelpricecomparison.entity.JinjiangBrand">
+        SELECT * FROM jinjiang_brands WHERE brand_name LIKE CONCAT('%', #{brandName}, '%')
+    </select>
+
+    <!-- 批量插入品牌 -->
+    <insert id="batchInsert" parameterType="java.util.List">
+        INSERT INTO jinjiang_brands (brand_code, brand_name, brand_type, description, language_code, created_at, updated_at)
+        VALUES
+        <foreach collection="brands" item="brand" separator=",">
+            (#{brand.brandCode}, #{brand.brandName}, #{brand.brandType}, #{brand.description}, #{brand.languageCode}, #{brand.createdAt}, #{brand.updatedAt})
+        </foreach>
+    </insert>
+
+    <!-- 批量更新品牌 -->
+    <update id="batchUpdate" parameterType="java.util.List">
+        <foreach collection="brands" item="brand" separator=";">
+            UPDATE jinjiang_brands
+            SET brand_name = #{brand.brandName}, 
+                brand_type = #{brand.brandType}, 
+                description = #{brand.description}, 
+                language_code = #{brand.languageCode}, 
+                updated_at = #{brand.updatedAt}
+            WHERE brand_code = #{brand.brandCode}
+        </foreach>
+    </update>
+
+    <!-- 查询所有品牌 -->
+    <select id="selectAllBrands" resultType="org.xfy.hotelpricecomparison.entity.JinjiangBrand">
+        SELECT * FROM jinjiang_brands WHERE language_code = 0
+    </select>
+
+</mapper>

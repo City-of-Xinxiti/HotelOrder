@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.xfy.hotelpricecomparison.mapper.JinjiangRoomStatusMapper">
+
+    <!-- 根据酒店ID、营业日期和天数查询房态列表 -->
+    <select id="selectByInnIdAndDateRange" resultType="org.xfy.hotelpricecomparison.entity.JinjiangRoomStatus">
+        SELECT * FROM jinjiang_room_status 
+        WHERE inn_id = #{innId} 
+        AND end_of_day >= #{endOfDay} 
+        AND end_of_day &lt;= #{endOfDay} + (#{days} * 24 * 60 * 60 * 1000)
+        ORDER BY end_of_day ASC
+    </select>
+
+    <!-- 根据酒店ID查询房态列表 -->
+    <select id="selectByInnId" resultType="org.xfy.hotelpricecomparison.entity.JinjiangRoomStatus">
+        SELECT * FROM jinjiang_room_status WHERE inn_id = #{innId}
+    </select>
+
+    <!-- 根据房型编码查询房态列表 -->
+    <select id="selectByRoomTypeCode" resultType="org.xfy.hotelpricecomparison.entity.JinjiangRoomStatus">
+        SELECT * FROM jinjiang_room_status WHERE room_type_code = #{roomTypeCode}
+    </select>
+
+    <!-- 根据营业日期查询房态列表 -->
+    <select id="selectByEndOfDay" resultType="org.xfy.hotelpricecomparison.entity.JinjiangRoomStatus">
+        SELECT * FROM jinjiang_room_status WHERE end_of_day = #{endOfDay}
+    </select>
+
+</mapper>

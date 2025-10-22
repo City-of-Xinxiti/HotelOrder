@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.xfy.hotelpricecomparison.mapper.JinjiangOrderMapper">
+
+    <!-- 根据锦江订单号查询订单 -->
+    <select id="selectByOrderCode" resultType="org.xfy.hotelpricecomparison.entity.JinjiangOrder">
+        SELECT * FROM jinjiang_orders WHERE order_code = #{orderCode}
+    </select>
+
+    <!-- 根据外部订单号查询订单 -->
+    <select id="selectByExternalId" resultType="org.xfy.hotelpricecomparison.entity.JinjiangOrder">
+        SELECT * FROM jinjiang_orders WHERE external_id = #{externalId}
+    </select>
+
+    <!-- 根据酒店ID查询订单列表 -->
+    <select id="selectByInnId" resultType="org.xfy.hotelpricecomparison.entity.JinjiangOrder">
+        SELECT * FROM jinjiang_orders WHERE inn_id = #{innId}
+    </select>
+
+    <!-- 根据预订人姓名查询订单列表 -->
+    <select id="selectByBookName" resultType="org.xfy.hotelpricecomparison.entity.JinjiangOrder">
+        SELECT * FROM jinjiang_orders WHERE book_name LIKE CONCAT('%', #{bookName}, '%')
+    </select>
+
+    <!-- 根据预订人手机查询订单列表 -->
+    <select id="selectByBookMobile" resultType="org.xfy.hotelpricecomparison.entity.JinjiangOrder">
+        SELECT * FROM jinjiang_orders WHERE book_mobile = #{bookMobile}
+    </select>
+
+    <!-- 根据订单状态查询订单列表 -->
+    <select id="selectByOrderState" resultType="org.xfy.hotelpricecomparison.entity.JinjiangOrder">
+        SELECT * FROM jinjiang_orders WHERE order_state = #{orderState}
+    </select>
+
+    <!-- 根据支付方式查询订单列表 -->
+    <select id="selectByPayType" resultType="org.xfy.hotelpricecomparison.entity.JinjiangOrder">
+        SELECT * FROM jinjiang_orders WHERE pay_type = #{payType}
+    </select>
+
+    <!-- 根据入住日期范围查询订单列表 -->
+    <select id="selectByDateRange" resultType="org.xfy.hotelpricecomparison.entity.JinjiangOrder">
+        SELECT * FROM jinjiang_orders 
+        WHERE dt_arr_orig &gt;= #{startDate} AND dt_arr_orig &lt;= #{endDate}
+        ORDER BY dt_arr_orig ASC
+    </select>
+
+</mapper>
