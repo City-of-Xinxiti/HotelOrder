@@ -27,7 +27,7 @@ echo "  - 锦江API: ${JINJIANG_API_BASE_URL}"
 
 # 停止现有服务
 echo "🛑 停止现有服务..."
-docker-compose down --remove-orphans
+docker compose down --remove-orphans
 
 # 清理旧镜像（可选）
 read -p "是否清理旧的Docker镜像？(y/N): " -n 1 -r
@@ -39,7 +39,7 @@ fi
 
 # 构建并启动服务
 echo "🔨 构建并启动服务..."
-docker-compose --env-file env.production up -d --build
+docker compose --env-file env.production up -d --build
 
 # 等待服务启动
 echo "⏳ 等待服务启动..."
@@ -47,7 +47,7 @@ sleep 30
 
 # 检查服务状态
 echo "🔍 检查服务状态..."
-docker-compose ps
+docker compose ps
 
 # 检查健康状态
 echo "🏥 检查服务健康状态..."
