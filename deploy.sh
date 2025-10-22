@@ -7,23 +7,6 @@ set -e
 
 echo "🚀 开始部署酒店预订系统..."
 
-# 检查Docker是否安装
-if ! command -v docker &> /dev/null; then
-    echo "❌ Docker未安装，正在安装Docker..."
-    curl -fsSL https://get.docker.com | bash -s docker
-    systemctl start docker
-    systemctl enable docker
-    usermod -aG docker $USER
-    echo "✅ Docker安装完成，请重新登录或执行 'newgrp docker'"
-fi
-
-if ! command -v docker-compose &> /dev/null; then
-    echo "❌ Docker Compose未安装，正在安装Docker Compose..."
-    curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-    chmod +x /usr/local/bin/docker-compose
-    echo "✅ Docker Compose安装完成"
-fi
-
 # 检查环境配置文件
 if [ ! -f "env.production" ]; then
     echo "❌ 未找到生产环境配置文件 env.production"
