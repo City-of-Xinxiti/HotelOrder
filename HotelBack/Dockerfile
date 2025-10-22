@@ -1,5 +1,5 @@
 # 多阶段构建
-FROM openjdk:21-jdk-slim as builder
+FROM registry.cn-hangzhou.aliyuncs.com/openjdk/openjdk:21-jre-slim as builder
 
 # 设置工作目录
 WORKDIR /app
