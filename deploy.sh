@@ -15,7 +15,9 @@ if [ ! -f "env.production" ]; then
 fi
 
 # 加载环境变量
-export $(cat env.production | grep -v '^#' | xargs)
+set -a  # 自动导出所有变量
+source env.production
+set +a  # 关闭自动导出
 
 echo "📋 当前配置："
 echo "  - 数据库: 阿里云RDS (${RDS_URL})"
