@@ -1,0 +1,13 @@
+build/
+.gradle/
+gradle/
+gradlew
+gradlew.bat
+*.log
+.DS_Store
+*.iml
+.idea/
+.vscode/
+*.swp
+*.swo
+*~

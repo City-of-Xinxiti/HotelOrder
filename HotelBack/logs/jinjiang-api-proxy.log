@@ -1,0 +1,654 @@
+2025-10-22 12:08:05.341 [restartedMain] INFO  o.x.h.HotelPriceComparisonApplication - Starting HotelPriceComparisonApplication using Java 21.0.8 with PID 5756 (C:\Users\wangz\Hotel\HotelBack\build\classes\java\main started by wangz in C:\Users\wangz\Hotel\HotelBack)
+2025-10-22 12:08:05.353 [restartedMain] DEBUG o.x.h.HotelPriceComparisonApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+2025-10-22 12:08:05.354 [restartedMain] INFO  o.x.h.HotelPriceComparisonApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-22 12:08:05.420 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-22 12:08:05.420 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-22 12:08:06.855 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+2025-10-22 12:08:06.878 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-10-22 12:08:06.879 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2025-10-22 12:08:06.938 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-10-22 12:08:06.938 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1518 ms
+2025-10-22 12:08:07.796 [restartedMain] INFO  o.x.h.service.impl.JinjiangApiServiceImpl - RestTemplate超时配置已设置 - 连接超时: 5000ms, 读取超时: 10000ms
+2025-10-22 12:08:08.246 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-10-22 12:08:08.322 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path ''
+2025-10-22 12:08:08.334 [restartedMain] INFO  o.x.h.HotelPriceComparisonApplication - Started HotelPriceComparisonApplication in 3.6 seconds (process running for 4.167)
+2025-10-22 12:15:17.219 [http-nio-8082-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-22 12:15:17.220 [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-10-22 12:15:17.224 [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2025-10-22 12:15:17.394 [http-nio-8082-exec-1] INFO  o.x.h.controller.HotelController - 获取酒店列表 - cityCode: 010, brandCode: null, status: null
+2025-10-22 12:15:17.456 [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-10-22 12:15:18.424 [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@54a7efb0
+2025-10-22 12:15:18.431 [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-10-22 12:15:18.462 [http-nio-8082-exec-1] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==>  Preparing: SELECT * FROM jinjiang_hotels WHERE valid = 1
+2025-10-22 12:15:18.631 [http-nio-8082-exec-1] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==> Parameters: 
+2025-10-22 12:15:19.031 [http-nio-8082-exec-1] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - <==      Total: 5
+2025-10-22 12:15:19.309 [http-nio-8082-exec-2] INFO  o.x.h.controller.HotelController - 获取酒店列表 - cityCode: 010, brandCode: null, status: null
+2025-10-22 12:15:19.310 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==>  Preparing: SELECT * FROM jinjiang_hotels WHERE valid = 1
+2025-10-22 12:15:19.311 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==> Parameters: 
+2025-10-22 12:15:19.327 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - <==      Total: 5
+2025-10-22 12:18:33.457 [http-nio-8082-exec-5] INFO  o.x.h.controller.HotelController - 获取酒店列表 - cityCode: 010, brandCode: null, status: null
+2025-10-22 12:18:33.459 [http-nio-8082-exec-5] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==>  Preparing: SELECT * FROM jinjiang_hotels WHERE valid = 1
+2025-10-22 12:18:33.460 [http-nio-8082-exec-5] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==> Parameters: 
+2025-10-22 12:18:33.470 [http-nio-8082-exec-5] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - <==      Total: 5
+2025-10-22 12:18:33.493 [http-nio-8082-exec-6] INFO  o.x.h.controller.HotelController - 获取酒店列表 - cityCode: 010, brandCode: null, status: null
+2025-10-22 12:18:33.493 [http-nio-8082-exec-6] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==>  Preparing: SELECT * FROM jinjiang_hotels WHERE valid = 1
+2025-10-22 12:18:33.494 [http-nio-8082-exec-6] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==> Parameters: 
+2025-10-22 12:18:33.508 [http-nio-8082-exec-6] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - <==      Total: 5
+2025-10-22 12:20:48.324 [http-nio-8082-exec-9] INFO  o.x.h.controller.HotelController - 获取酒店列表 - cityCode: 010, brandCode: null, status: null
+2025-10-22 12:20:48.325 [http-nio-8082-exec-9] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==>  Preparing: SELECT * FROM jinjiang_hotels WHERE valid = 1
+2025-10-22 12:20:48.326 [http-nio-8082-exec-9] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==> Parameters: 
+2025-10-22 12:20:48.333 [http-nio-8082-exec-9] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - <==      Total: 5
+2025-10-22 12:20:48.342 [http-nio-8082-exec-10] INFO  o.x.h.controller.HotelController - 获取酒店列表 - cityCode: 010, brandCode: null, status: null
+2025-10-22 12:20:48.344 [http-nio-8082-exec-10] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==>  Preparing: SELECT * FROM jinjiang_hotels WHERE valid = 1
+2025-10-22 12:20:48.345 [http-nio-8082-exec-10] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==> Parameters: 
+2025-10-22 12:20:48.350 [http-nio-8082-exec-10] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - <==      Total: 5
+2025-10-22 12:20:50.488 [http-nio-8082-exec-1] INFO  o.x.h.controller.HotelController - 获取酒店列表 - cityCode: 010, brandCode: null, status: null
+2025-10-22 12:20:50.489 [http-nio-8082-exec-1] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==>  Preparing: SELECT * FROM jinjiang_hotels WHERE valid = 1
+2025-10-22 12:20:50.491 [http-nio-8082-exec-1] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==> Parameters: 
+2025-10-22 12:20:50.495 [http-nio-8082-exec-1] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - <==      Total: 5
+2025-10-22 12:20:50.504 [http-nio-8082-exec-2] INFO  o.x.h.controller.HotelController - 获取酒店列表 - cityCode: 010, brandCode: null, status: null
+2025-10-22 12:20:50.505 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==>  Preparing: SELECT * FROM jinjiang_hotels WHERE valid = 1
+2025-10-22 12:20:50.505 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==> Parameters: 
+2025-10-22 12:20:50.509 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - <==      Total: 5
+2025-10-22 12:20:51.619 [http-nio-8082-exec-4] INFO  o.x.h.controller.HotelController - 获取酒店列表 - cityCode: 010, brandCode: null, status: null
+2025-10-22 12:20:51.619 [http-nio-8082-exec-4] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==>  Preparing: SELECT * FROM jinjiang_hotels WHERE valid = 1
+2025-10-22 12:20:51.620 [http-nio-8082-exec-4] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==> Parameters: 
+2025-10-22 12:20:51.624 [http-nio-8082-exec-4] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - <==      Total: 5
+2025-10-22 12:20:51.632 [http-nio-8082-exec-3] INFO  o.x.h.controller.HotelController - 获取酒店列表 - cityCode: 010, brandCode: null, status: null
+2025-10-22 12:20:51.633 [http-nio-8082-exec-3] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==>  Preparing: SELECT * FROM jinjiang_hotels WHERE valid = 1
+2025-10-22 12:20:51.633 [http-nio-8082-exec-3] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==> Parameters: 
+2025-10-22 12:20:51.638 [http-nio-8082-exec-3] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - <==      Total: 5
+2025-10-22 12:28:28.255 [http-nio-8082-exec-8] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 12:28:28.258 [http-nio-8082-exec-8] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 12:28:28.260 [http-nio-8082-exec-8] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 12:28:28.287 [http-nio-8082-exec-8] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 12:28:28.295 [http-nio-8082-exec-7] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 12:28:28.295 [http-nio-8082-exec-7] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 12:28:28.295 [http-nio-8082-exec-7] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 12:28:28.297 [http-nio-8082-exec-7] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 18:17:49.846 [restartedMain] INFO  o.x.h.HotelPriceComparisonApplication - Starting HotelPriceComparisonApplication using Java 21.0.8 with PID 22228 (C:\Users\wangz\Hotel\HotelBack\build\classes\java\main started by wangz in C:\Users\wangz\Hotel\HotelBack)
+2025-10-22 18:17:49.848 [restartedMain] DEBUG o.x.h.HotelPriceComparisonApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+2025-10-22 18:17:49.849 [restartedMain] INFO  o.x.h.HotelPriceComparisonApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-22 18:17:49.960 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-22 18:17:49.960 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-22 18:17:52.024 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+2025-10-22 18:17:52.045 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-10-22 18:17:52.045 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2025-10-22 18:17:52.117 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-10-22 18:17:52.118 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2157 ms
+2025-10-22 18:17:54.379 [restartedMain] INFO  o.x.h.service.impl.JinjiangApiServiceImpl - RestTemplate超时配置已设置 - 连接超时: 5000ms, 读取超时: 10000ms
+2025-10-22 18:17:55.318 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-10-22 18:17:55.435 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path ''
+2025-10-22 18:17:55.446 [restartedMain] INFO  o.x.h.HotelPriceComparisonApplication - Started HotelPriceComparisonApplication in 6.21 seconds (process running for 6.742)
+2025-10-22 18:17:59.735 [http-nio-8082-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-22 18:17:59.735 [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-10-22 18:17:59.736 [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-10-22 18:17:59.791 [http-nio-8082-exec-1] INFO  o.x.h.controller.HotelController - 获取酒店列表 - cityCode: 010, brandCode: null, status: null
+2025-10-22 18:17:59.812 [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-10-22 18:18:00.035 [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3be53c9c
+2025-10-22 18:18:00.038 [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-10-22 18:18:00.046 [http-nio-8082-exec-1] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==>  Preparing: SELECT * FROM jinjiang_hotels WHERE valid = 1
+2025-10-22 18:18:00.075 [http-nio-8082-exec-1] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==> Parameters: 
+2025-10-22 18:18:00.123 [http-nio-8082-exec-1] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - <==      Total: 5
+2025-10-22 18:18:00.216 [http-nio-8082-exec-2] INFO  o.x.h.controller.HotelController - 获取酒店列表 - cityCode: 010, brandCode: null, status: null
+2025-10-22 18:18:00.216 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==>  Preparing: SELECT * FROM jinjiang_hotels WHERE valid = 1
+2025-10-22 18:18:00.217 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==> Parameters: 
+2025-10-22 18:18:00.224 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - <==      Total: 5
+2025-10-22 18:22:09.682 [http-nio-8082-exec-5] INFO  o.x.h.controller.HotelController - 获取酒店列表 - cityCode: 010, brandCode: null, status: null
+2025-10-22 18:22:09.685 [http-nio-8082-exec-5] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==>  Preparing: SELECT * FROM jinjiang_hotels WHERE valid = 1
+2025-10-22 18:22:09.686 [http-nio-8082-exec-5] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==> Parameters: 
+2025-10-22 18:22:09.696 [http-nio-8082-exec-5] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - <==      Total: 5
+2025-10-22 18:22:09.716 [http-nio-8082-exec-6] INFO  o.x.h.controller.HotelController - 获取酒店列表 - cityCode: 010, brandCode: null, status: null
+2025-10-22 18:22:09.716 [http-nio-8082-exec-6] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==>  Preparing: SELECT * FROM jinjiang_hotels WHERE valid = 1
+2025-10-22 18:22:09.717 [http-nio-8082-exec-6] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==> Parameters: 
+2025-10-22 18:22:09.724 [http-nio-8082-exec-6] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - <==      Total: 5
+2025-10-22 18:25:18.284 [http-nio-8082-exec-9] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 18:25:18.289 [http-nio-8082-exec-9] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 18:25:18.292 [http-nio-8082-exec-9] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 18:25:18.300 [http-nio-8082-exec-9] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 18:25:18.394 [http-nio-8082-exec-10] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 18:25:18.395 [http-nio-8082-exec-10] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 18:25:18.396 [http-nio-8082-exec-10] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 18:25:18.399 [http-nio-8082-exec-10] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 18:25:38.641 [http-nio-8082-exec-1] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 18:25:38.642 [http-nio-8082-exec-1] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 18:25:38.642 [http-nio-8082-exec-1] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 18:25:38.645 [http-nio-8082-exec-1] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 18:25:38.652 [http-nio-8082-exec-2] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 18:25:38.652 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 18:25:38.653 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 18:25:38.656 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 18:26:59.013 [http-nio-8082-exec-3] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 18:26:59.014 [http-nio-8082-exec-3] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 18:26:59.014 [http-nio-8082-exec-3] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 18:26:59.018 [http-nio-8082-exec-3] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 18:26:59.025 [http-nio-8082-exec-5] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 18:26:59.025 [http-nio-8082-exec-5] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 18:26:59.026 [http-nio-8082-exec-5] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 18:26:59.028 [http-nio-8082-exec-5] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 18:28:43.628 [http-nio-8082-exec-7] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 18:28:43.630 [http-nio-8082-exec-7] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 18:28:43.631 [http-nio-8082-exec-7] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 18:28:43.637 [http-nio-8082-exec-7] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 18:28:43.644 [http-nio-8082-exec-8] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 18:28:43.646 [http-nio-8082-exec-8] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 18:28:43.646 [http-nio-8082-exec-8] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 18:28:43.650 [http-nio-8082-exec-8] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 18:29:44.094 [http-nio-8082-exec-10] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 18:29:44.095 [http-nio-8082-exec-10] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 18:29:44.097 [http-nio-8082-exec-10] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 18:29:44.102 [http-nio-8082-exec-10] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 18:29:44.113 [http-nio-8082-exec-1] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 18:29:44.113 [http-nio-8082-exec-1] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 18:29:44.114 [http-nio-8082-exec-1] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 18:29:44.120 [http-nio-8082-exec-1] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 18:30:06.939 [http-nio-8082-exec-2] INFO  o.x.h.controller.HotelController - 获取酒店列表 - cityCode: 010, brandCode: null, status: null
+2025-10-22 18:30:06.940 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==>  Preparing: SELECT * FROM jinjiang_hotels WHERE valid = 1
+2025-10-22 18:30:06.940 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==> Parameters: 
+2025-10-22 18:30:06.944 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - <==      Total: 5
+2025-10-22 18:30:06.951 [http-nio-8082-exec-4] INFO  o.x.h.controller.HotelController - 获取酒店列表 - cityCode: 010, brandCode: null, status: null
+2025-10-22 18:30:06.952 [http-nio-8082-exec-4] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==>  Preparing: SELECT * FROM jinjiang_hotels WHERE valid = 1
+2025-10-22 18:30:06.953 [http-nio-8082-exec-4] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==> Parameters: 
+2025-10-22 18:30:06.957 [http-nio-8082-exec-4] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - <==      Total: 5
+2025-10-22 18:30:09.249 [http-nio-8082-exec-3] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 18:30:09.250 [http-nio-8082-exec-3] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 18:30:09.251 [http-nio-8082-exec-3] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 18:30:09.252 [http-nio-8082-exec-3] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 18:30:09.255 [http-nio-8082-exec-5] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 18:30:09.256 [http-nio-8082-exec-5] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 18:30:09.256 [http-nio-8082-exec-5] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 18:30:09.258 [http-nio-8082-exec-5] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 18:31:11.238 [http-nio-8082-exec-8] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 18:31:11.240 [http-nio-8082-exec-8] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 18:31:11.240 [http-nio-8082-exec-8] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 18:31:11.243 [http-nio-8082-exec-8] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 18:31:11.252 [http-nio-8082-exec-9] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 18:31:11.253 [http-nio-8082-exec-9] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 18:31:11.253 [http-nio-8082-exec-9] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 18:31:11.256 [http-nio-8082-exec-9] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 18:31:44.093 [http-nio-8082-exec-10] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 18:31:44.093 [http-nio-8082-exec-10] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 18:31:44.094 [http-nio-8082-exec-10] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 18:31:44.096 [http-nio-8082-exec-10] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 18:31:44.101 [http-nio-8082-exec-1] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 18:31:44.101 [http-nio-8082-exec-1] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 18:31:44.102 [http-nio-8082-exec-1] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 18:31:44.104 [http-nio-8082-exec-1] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 18:31:44.253 [http-nio-8082-exec-2] INFO  o.x.h.controller.HotelController - 获取酒店列表 - cityCode: 010, brandCode: null, status: null
+2025-10-22 18:31:44.254 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==>  Preparing: SELECT * FROM jinjiang_hotels WHERE valid = 1
+2025-10-22 18:31:44.254 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==> Parameters: 
+2025-10-22 18:31:44.257 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - <==      Total: 5
+2025-10-22 18:31:44.262 [http-nio-8082-exec-4] INFO  o.x.h.controller.HotelController - 获取酒店列表 - cityCode: 010, brandCode: null, status: null
+2025-10-22 18:31:44.262 [http-nio-8082-exec-4] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==>  Preparing: SELECT * FROM jinjiang_hotels WHERE valid = 1
+2025-10-22 18:31:44.263 [http-nio-8082-exec-4] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==> Parameters: 
+2025-10-22 18:31:44.268 [http-nio-8082-exec-4] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - <==      Total: 5
+2025-10-22 18:31:51.932 [http-nio-8082-exec-3] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 18:31:51.933 [http-nio-8082-exec-3] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 18:31:51.934 [http-nio-8082-exec-3] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 18:31:51.936 [http-nio-8082-exec-3] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 18:31:51.941 [http-nio-8082-exec-5] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 18:31:51.942 [http-nio-8082-exec-5] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 18:31:51.943 [http-nio-8082-exec-5] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 18:31:51.947 [http-nio-8082-exec-5] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 18:32:51.856 [http-nio-8082-exec-7] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 18:32:51.859 [http-nio-8082-exec-7] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 18:32:51.860 [http-nio-8082-exec-7] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 18:32:51.863 [http-nio-8082-exec-7] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 18:32:51.869 [http-nio-8082-exec-8] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 18:32:51.869 [http-nio-8082-exec-8] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 18:32:51.870 [http-nio-8082-exec-8] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 18:32:51.873 [http-nio-8082-exec-8] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 18:33:24.477 [http-nio-8082-exec-9] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 18:33:24.478 [http-nio-8082-exec-9] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 18:33:24.479 [http-nio-8082-exec-9] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 18:33:24.481 [http-nio-8082-exec-9] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 18:33:24.487 [http-nio-8082-exec-10] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 18:33:24.490 [http-nio-8082-exec-10] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 18:33:24.490 [http-nio-8082-exec-10] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 18:33:24.494 [http-nio-8082-exec-10] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 18:33:53.217 [http-nio-8082-exec-1] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 18:33:53.218 [http-nio-8082-exec-1] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 18:33:53.219 [http-nio-8082-exec-1] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 18:33:53.222 [http-nio-8082-exec-1] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 18:33:53.246 [http-nio-8082-exec-2] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 18:33:53.247 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 18:33:53.248 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 18:33:53.251 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 18:33:59.774 [http-nio-8082-exec-4] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 18:33:59.774 [http-nio-8082-exec-4] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 18:33:59.775 [http-nio-8082-exec-4] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 18:33:59.777 [http-nio-8082-exec-4] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 18:33:59.784 [http-nio-8082-exec-3] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 18:33:59.785 [http-nio-8082-exec-3] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 18:33:59.785 [http-nio-8082-exec-3] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 18:33:59.787 [http-nio-8082-exec-3] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 18:34:08.011 [http-nio-8082-exec-5] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 18:34:08.011 [http-nio-8082-exec-5] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 18:34:08.012 [http-nio-8082-exec-5] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 18:34:08.014 [http-nio-8082-exec-5] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 18:34:08.018 [http-nio-8082-exec-6] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 18:34:08.018 [http-nio-8082-exec-6] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 18:34:08.019 [http-nio-8082-exec-6] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 18:34:08.021 [http-nio-8082-exec-6] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 18:34:10.566 [http-nio-8082-exec-7] INFO  o.x.h.controller.HotelController - 获取酒店列表 - cityCode: 010, brandCode: null, status: null
+2025-10-22 18:34:10.567 [http-nio-8082-exec-7] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==>  Preparing: SELECT * FROM jinjiang_hotels WHERE valid = 1
+2025-10-22 18:34:10.567 [http-nio-8082-exec-7] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==> Parameters: 
+2025-10-22 18:34:10.571 [http-nio-8082-exec-7] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - <==      Total: 5
+2025-10-22 18:34:10.575 [http-nio-8082-exec-8] INFO  o.x.h.controller.HotelController - 获取酒店列表 - cityCode: 010, brandCode: null, status: null
+2025-10-22 18:34:10.576 [http-nio-8082-exec-8] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==>  Preparing: SELECT * FROM jinjiang_hotels WHERE valid = 1
+2025-10-22 18:34:10.576 [http-nio-8082-exec-8] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==> Parameters: 
+2025-10-22 18:34:10.580 [http-nio-8082-exec-8] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - <==      Total: 5
+2025-10-22 18:34:12.870 [http-nio-8082-exec-9] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 18:34:12.871 [http-nio-8082-exec-9] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 18:34:12.871 [http-nio-8082-exec-9] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 18:34:12.872 [http-nio-8082-exec-9] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 18:34:12.878 [http-nio-8082-exec-10] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 18:34:12.878 [http-nio-8082-exec-10] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 18:34:12.878 [http-nio-8082-exec-10] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 18:34:12.880 [http-nio-8082-exec-10] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 18:35:57.842 [http-nio-8082-exec-4] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 18:35:57.844 [http-nio-8082-exec-4] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 18:35:57.845 [http-nio-8082-exec-4] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 18:35:57.847 [http-nio-8082-exec-4] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 18:35:57.855 [http-nio-8082-exec-3] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 18:35:57.855 [http-nio-8082-exec-3] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 18:35:57.856 [http-nio-8082-exec-3] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 18:35:57.859 [http-nio-8082-exec-3] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 18:35:58.717 [http-nio-8082-exec-5] INFO  o.x.h.controller.HotelController - 获取酒店列表 - cityCode: 010, brandCode: null, status: null
+2025-10-22 18:35:58.718 [http-nio-8082-exec-5] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==>  Preparing: SELECT * FROM jinjiang_hotels WHERE valid = 1
+2025-10-22 18:35:58.718 [http-nio-8082-exec-5] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==> Parameters: 
+2025-10-22 18:35:58.723 [http-nio-8082-exec-5] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - <==      Total: 5
+2025-10-22 18:35:58.730 [http-nio-8082-exec-6] INFO  o.x.h.controller.HotelController - 获取酒店列表 - cityCode: 010, brandCode: null, status: null
+2025-10-22 18:35:58.730 [http-nio-8082-exec-6] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==>  Preparing: SELECT * FROM jinjiang_hotels WHERE valid = 1
+2025-10-22 18:35:58.731 [http-nio-8082-exec-6] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==> Parameters: 
+2025-10-22 18:35:58.734 [http-nio-8082-exec-6] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - <==      Total: 5
+2025-10-22 18:36:00.253 [http-nio-8082-exec-7] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 18:36:00.253 [http-nio-8082-exec-7] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 18:36:00.254 [http-nio-8082-exec-7] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 18:36:00.257 [http-nio-8082-exec-7] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 18:36:00.261 [http-nio-8082-exec-8] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 18:36:00.262 [http-nio-8082-exec-8] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 18:36:00.262 [http-nio-8082-exec-8] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 18:36:00.263 [http-nio-8082-exec-8] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 18:42:48.991 [http-nio-8082-exec-1] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 18:42:48.992 [http-nio-8082-exec-1] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 18:42:48.993 [http-nio-8082-exec-1] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 18:42:48.995 [http-nio-8082-exec-1] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 18:42:48.999 [http-nio-8082-exec-2] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 18:42:48.999 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 18:42:49.000 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 18:42:49.003 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 18:44:02.560 [http-nio-8082-exec-3] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 18:44:02.561 [http-nio-8082-exec-3] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 18:44:02.562 [http-nio-8082-exec-3] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 18:44:02.564 [http-nio-8082-exec-3] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 18:44:14.554 [http-nio-8082-exec-5] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 18:44:14.555 [http-nio-8082-exec-5] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 18:44:14.555 [http-nio-8082-exec-5] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 18:44:14.558 [http-nio-8082-exec-5] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 18:44:21.543 [http-nio-8082-exec-6] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 18:44:21.544 [http-nio-8082-exec-6] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 18:44:21.544 [http-nio-8082-exec-6] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 18:44:21.546 [http-nio-8082-exec-6] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 18:53:31.547 [http-nio-8082-exec-8] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 18:53:31.548 [http-nio-8082-exec-8] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 18:53:31.548 [http-nio-8082-exec-8] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 18:53:31.559 [http-nio-8082-exec-8] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 19:00:16.252 [http-nio-8082-exec-10] INFO  o.x.h.controller.HotelController - 获取酒店列表 - cityCode: 010, brandCode: null, status: null
+2025-10-22 19:00:16.253 [http-nio-8082-exec-10] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==>  Preparing: SELECT * FROM jinjiang_hotels WHERE valid = 1
+2025-10-22 19:00:16.254 [http-nio-8082-exec-10] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==> Parameters: 
+2025-10-22 19:00:16.260 [http-nio-8082-exec-10] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - <==      Total: 5
+2025-10-22 19:00:16.266 [http-nio-8082-exec-1] INFO  o.x.h.controller.HotelController - 获取酒店列表 - cityCode: 010, brandCode: null, status: null
+2025-10-22 19:00:16.266 [http-nio-8082-exec-1] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==>  Preparing: SELECT * FROM jinjiang_hotels WHERE valid = 1
+2025-10-22 19:00:16.266 [http-nio-8082-exec-1] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==> Parameters: 
+2025-10-22 19:00:16.269 [http-nio-8082-exec-1] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - <==      Total: 5
+2025-10-22 19:01:15.136 [http-nio-8082-exec-2] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 19:01:15.137 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 19:01:15.137 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 19:01:15.139 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 19:01:15.147 [http-nio-8082-exec-4] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 19:01:15.147 [http-nio-8082-exec-4] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 19:01:15.148 [http-nio-8082-exec-4] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 19:01:15.150 [http-nio-8082-exec-4] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 19:02:44.049 [http-nio-8082-exec-6] INFO  o.x.h.controller.HotelController - 获取酒店列表 - cityCode: 010, brandCode: null, status: null
+2025-10-22 19:02:44.050 [http-nio-8082-exec-6] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==>  Preparing: SELECT * FROM jinjiang_hotels WHERE valid = 1
+2025-10-22 19:02:44.051 [http-nio-8082-exec-6] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==> Parameters: 
+2025-10-22 19:02:44.056 [http-nio-8082-exec-6] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - <==      Total: 5
+2025-10-22 19:02:44.064 [http-nio-8082-exec-7] INFO  o.x.h.controller.HotelController - 获取酒店列表 - cityCode: 010, brandCode: null, status: null
+2025-10-22 19:02:44.064 [http-nio-8082-exec-7] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==>  Preparing: SELECT * FROM jinjiang_hotels WHERE valid = 1
+2025-10-22 19:02:44.065 [http-nio-8082-exec-7] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==> Parameters: 
+2025-10-22 19:02:44.068 [http-nio-8082-exec-7] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - <==      Total: 5
+2025-10-22 19:04:57.499 [http-nio-8082-exec-10] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 19:04:57.501 [http-nio-8082-exec-10] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 19:04:57.501 [http-nio-8082-exec-10] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 19:04:57.513 [http-nio-8082-exec-10] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 19:04:57.592 [http-nio-8082-exec-1] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 19:04:57.593 [http-nio-8082-exec-1] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 19:04:57.593 [http-nio-8082-exec-1] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 19:04:57.595 [http-nio-8082-exec-1] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 19:04:58.667 [http-nio-8082-exec-2] INFO  o.x.h.controller.HotelController - 获取酒店列表 - cityCode: 010, brandCode: null, status: null
+2025-10-22 19:04:58.667 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==>  Preparing: SELECT * FROM jinjiang_hotels WHERE valid = 1
+2025-10-22 19:04:58.668 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==> Parameters: 
+2025-10-22 19:04:58.674 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - <==      Total: 5
+2025-10-22 19:04:58.681 [http-nio-8082-exec-4] INFO  o.x.h.controller.HotelController - 获取酒店列表 - cityCode: 010, brandCode: null, status: null
+2025-10-22 19:04:58.682 [http-nio-8082-exec-4] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==>  Preparing: SELECT * FROM jinjiang_hotels WHERE valid = 1
+2025-10-22 19:04:58.683 [http-nio-8082-exec-4] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==> Parameters: 
+2025-10-22 19:04:58.686 [http-nio-8082-exec-4] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - <==      Total: 5
+2025-10-22 19:06:03.543 [http-nio-8082-exec-6] INFO  o.x.h.controller.HotelController - 获取酒店列表 - cityCode: 010, brandCode: null, status: null
+2025-10-22 19:06:03.544 [http-nio-8082-exec-6] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==>  Preparing: SELECT * FROM jinjiang_hotels WHERE valid = 1
+2025-10-22 19:06:03.544 [http-nio-8082-exec-6] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==> Parameters: 
+2025-10-22 19:06:03.547 [http-nio-8082-exec-6] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - <==      Total: 5
+2025-10-22 19:06:03.552 [http-nio-8082-exec-7] INFO  o.x.h.controller.HotelController - 获取酒店列表 - cityCode: 010, brandCode: null, status: null
+2025-10-22 19:06:03.553 [http-nio-8082-exec-7] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==>  Preparing: SELECT * FROM jinjiang_hotels WHERE valid = 1
+2025-10-22 19:06:03.553 [http-nio-8082-exec-7] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==> Parameters: 
+2025-10-22 19:06:03.556 [http-nio-8082-exec-7] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - <==      Total: 5
+2025-10-22 19:11:46.626 [http-nio-8082-exec-2] INFO  o.x.h.controller.HotelController - 获取酒店列表 - cityCode: null, brandCode: null, status: null
+2025-10-22 19:11:46.627 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==>  Preparing: SELECT * FROM jinjiang_hotels WHERE valid = 1
+2025-10-22 19:11:46.628 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==> Parameters: 
+2025-10-22 19:11:46.634 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - <==      Total: 5
+2025-10-22 19:12:31.409 [restartedMain] INFO  o.x.h.HotelPriceComparisonApplication - Starting HotelPriceComparisonApplication using Java 21.0.8 with PID 20132 (C:\Users\wangz\Hotel\HotelBack\build\classes\java\main started by wangz in C:\Users\wangz\Hotel\HotelBack)
+2025-10-22 19:12:31.411 [restartedMain] DEBUG o.x.h.HotelPriceComparisonApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+2025-10-22 19:12:31.413 [restartedMain] INFO  o.x.h.HotelPriceComparisonApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-22 19:12:31.576 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-22 19:12:31.576 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-22 19:12:35.411 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+2025-10-22 19:12:35.454 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-10-22 19:12:35.454 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2025-10-22 19:12:35.737 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-10-22 19:12:35.738 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4161 ms
+2025-10-22 19:12:36.811 [restartedMain] INFO  o.x.h.service.impl.JinjiangApiServiceImpl - RestTemplate超时配置已设置 - 连接超时: 5000ms, 读取超时: 10000ms
+2025-10-22 19:12:37.808 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-10-22 19:12:37.962 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path ''
+2025-10-22 19:12:37.985 [restartedMain] INFO  o.x.h.HotelPriceComparisonApplication - Started HotelPriceComparisonApplication in 7.61 seconds (process running for 8.53)
+2025-10-22 19:12:44.793 [http-nio-8082-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-22 19:12:44.793 [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-10-22 19:12:44.795 [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-10-22 19:12:44.925 [http-nio-8082-exec-1] INFO  o.x.h.controller.OrderController - 获取订单列表 - customerId: null, status: null, pageNum: 1, pageSize: 10
+2025-10-22 19:12:45.106 [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-10-22 19:12:46.044 [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@15c19e6c
+2025-10-22 19:12:46.050 [http-nio-8082-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-10-22 19:12:46.064 [http-nio-8082-exec-1] DEBUG o.x.h.mapper.OrderMapper.selectList - ==>  Preparing: SELECT id,order_number,hotel_id,hotel_name,room_type_id,room_type_name,check_in_date,check_out_date,nights,guests,total_price,status,customer_name,customer_phone,customer_email,customer_id,create_time,update_time,deleted FROM orders WHERE deleted=0 ORDER BY create_time DESC
+2025-10-22 19:12:46.101 [http-nio-8082-exec-1] DEBUG o.x.h.mapper.OrderMapper.selectList - ==> Parameters: 
+2025-10-22 19:12:46.150 [http-nio-8082-exec-1] DEBUG o.x.h.mapper.OrderMapper.selectList - <==      Total: 4
+2025-10-22 19:12:52.416 [http-nio-8082-exec-2] INFO  o.x.h.controller.OrderController - 获取订单列表 - customerId: null, status: null, pageNum: 1, pageSize: 10
+2025-10-22 19:12:52.418 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.OrderMapper.selectList - ==>  Preparing: SELECT id,order_number,hotel_id,hotel_name,room_type_id,room_type_name,check_in_date,check_out_date,nights,guests,total_price,status,customer_name,customer_phone,customer_email,customer_id,create_time,update_time,deleted FROM orders WHERE deleted=0 ORDER BY create_time DESC
+2025-10-22 19:12:52.418 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.OrderMapper.selectList - ==> Parameters: 
+2025-10-22 19:12:52.421 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.OrderMapper.selectList - <==      Total: 4
+2025-10-22 19:12:55.916 [http-nio-8082-exec-3] INFO  o.x.h.controller.OrderController - 获取订单列表 - customerId: null, status: null, pageNum: 1, pageSize: 10
+2025-10-22 19:12:55.917 [http-nio-8082-exec-3] DEBUG o.x.h.mapper.OrderMapper.selectList - ==>  Preparing: SELECT id,order_number,hotel_id,hotel_name,room_type_id,room_type_name,check_in_date,check_out_date,nights,guests,total_price,status,customer_name,customer_phone,customer_email,customer_id,create_time,update_time,deleted FROM orders WHERE deleted=0 ORDER BY create_time DESC
+2025-10-22 19:12:55.918 [http-nio-8082-exec-3] DEBUG o.x.h.mapper.OrderMapper.selectList - ==> Parameters: 
+2025-10-22 19:12:55.919 [http-nio-8082-exec-3] DEBUG o.x.h.mapper.OrderMapper.selectList - <==      Total: 4
+2025-10-22 19:12:58.458 [http-nio-8082-exec-4] INFO  o.x.h.controller.OrderController - 获取订单列表 - customerId: null, status: null, pageNum: 1, pageSize: 10
+2025-10-22 19:12:58.459 [http-nio-8082-exec-4] DEBUG o.x.h.mapper.OrderMapper.selectList - ==>  Preparing: SELECT id,order_number,hotel_id,hotel_name,room_type_id,room_type_name,check_in_date,check_out_date,nights,guests,total_price,status,customer_name,customer_phone,customer_email,customer_id,create_time,update_time,deleted FROM orders WHERE deleted=0 ORDER BY create_time DESC
+2025-10-22 19:12:58.460 [http-nio-8082-exec-4] DEBUG o.x.h.mapper.OrderMapper.selectList - ==> Parameters: 
+2025-10-22 19:12:58.464 [http-nio-8082-exec-4] DEBUG o.x.h.mapper.OrderMapper.selectList - <==      Total: 4
+2025-10-22 19:12:59.383 [http-nio-8082-exec-5] INFO  o.x.h.controller.OrderController - 获取订单列表 - customerId: null, status: null, pageNum: 1, pageSize: 10
+2025-10-22 19:12:59.385 [http-nio-8082-exec-5] DEBUG o.x.h.mapper.OrderMapper.selectList - ==>  Preparing: SELECT id,order_number,hotel_id,hotel_name,room_type_id,room_type_name,check_in_date,check_out_date,nights,guests,total_price,status,customer_name,customer_phone,customer_email,customer_id,create_time,update_time,deleted FROM orders WHERE deleted=0 ORDER BY create_time DESC
+2025-10-22 19:12:59.385 [http-nio-8082-exec-5] DEBUG o.x.h.mapper.OrderMapper.selectList - ==> Parameters: 
+2025-10-22 19:12:59.387 [http-nio-8082-exec-5] DEBUG o.x.h.mapper.OrderMapper.selectList - <==      Total: 4
+2025-10-22 19:13:49.341 [http-nio-8082-exec-6] INFO  o.x.h.controller.HotelController - 获取酒店列表 - cityCode: 010, brandCode: null, status: null
+2025-10-22 19:13:49.343 [http-nio-8082-exec-6] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==>  Preparing: SELECT * FROM jinjiang_hotels WHERE valid = 1
+2025-10-22 19:13:49.343 [http-nio-8082-exec-6] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==> Parameters: 
+2025-10-22 19:13:49.356 [http-nio-8082-exec-6] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - <==      Total: 5
+2025-10-22 19:13:49.371 [http-nio-8082-exec-7] INFO  o.x.h.controller.HotelController - 获取酒店列表 - cityCode: 010, brandCode: null, status: null
+2025-10-22 19:13:49.371 [http-nio-8082-exec-7] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==>  Preparing: SELECT * FROM jinjiang_hotels WHERE valid = 1
+2025-10-22 19:13:49.372 [http-nio-8082-exec-7] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==> Parameters: 
+2025-10-22 19:13:49.377 [http-nio-8082-exec-7] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - <==      Total: 5
+2025-10-22 19:13:53.203 [http-nio-8082-exec-8] INFO  o.x.h.controller.OrderController - 获取订单列表 - customerId: null, status: null, pageNum: 1, pageSize: 10
+2025-10-22 19:13:53.205 [http-nio-8082-exec-8] DEBUG o.x.h.mapper.OrderMapper.selectList - ==>  Preparing: SELECT id,order_number,hotel_id,hotel_name,room_type_id,room_type_name,check_in_date,check_out_date,nights,guests,total_price,status,customer_name,customer_phone,customer_email,customer_id,create_time,update_time,deleted FROM orders WHERE deleted=0 ORDER BY create_time DESC
+2025-10-22 19:13:53.206 [http-nio-8082-exec-8] DEBUG o.x.h.mapper.OrderMapper.selectList - ==> Parameters: 
+2025-10-22 19:13:53.209 [http-nio-8082-exec-8] DEBUG o.x.h.mapper.OrderMapper.selectList - <==      Total: 4
+2025-10-22 19:14:53.530 [http-nio-8082-exec-10] INFO  o.x.h.controller.OrderController - 获取订单列表 - customerId: null, status: null, pageNum: 1, pageSize: 10
+2025-10-22 19:14:53.535 [http-nio-8082-exec-10] DEBUG o.x.h.mapper.OrderMapper.selectList - ==>  Preparing: SELECT id,order_number,hotel_id,hotel_name,room_type_id,room_type_name,check_in_date,check_out_date,nights,guests,total_price,status,customer_name,customer_phone,customer_email,customer_id,create_time,update_time,deleted FROM orders WHERE deleted=0 ORDER BY create_time DESC
+2025-10-22 19:14:53.536 [http-nio-8082-exec-10] DEBUG o.x.h.mapper.OrderMapper.selectList - ==> Parameters: 
+2025-10-22 19:14:53.541 [http-nio-8082-exec-10] DEBUG o.x.h.mapper.OrderMapper.selectList - <==      Total: 4
+2025-10-22 19:14:56.529 [http-nio-8082-exec-1] INFO  o.x.h.controller.OrderController - 获取订单列表 - customerId: null, status: null, pageNum: 1, pageSize: 10
+2025-10-22 19:14:56.531 [http-nio-8082-exec-1] DEBUG o.x.h.mapper.OrderMapper.selectList - ==>  Preparing: SELECT id,order_number,hotel_id,hotel_name,room_type_id,room_type_name,check_in_date,check_out_date,nights,guests,total_price,status,customer_name,customer_phone,customer_email,customer_id,create_time,update_time,deleted FROM orders WHERE deleted=0 ORDER BY create_time DESC
+2025-10-22 19:14:56.532 [http-nio-8082-exec-1] DEBUG o.x.h.mapper.OrderMapper.selectList - ==> Parameters: 
+2025-10-22 19:14:56.535 [http-nio-8082-exec-1] DEBUG o.x.h.mapper.OrderMapper.selectList - <==      Total: 4
+2025-10-22 19:15:00.533 [http-nio-8082-exec-2] INFO  o.x.h.controller.OrderController - 获取订单列表 - customerId: null, status: null, pageNum: 1, pageSize: 10
+2025-10-22 19:15:00.535 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.OrderMapper.selectList - ==>  Preparing: SELECT id,order_number,hotel_id,hotel_name,room_type_id,room_type_name,check_in_date,check_out_date,nights,guests,total_price,status,customer_name,customer_phone,customer_email,customer_id,create_time,update_time,deleted FROM orders WHERE deleted=0 ORDER BY create_time DESC
+2025-10-22 19:15:00.536 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.OrderMapper.selectList - ==> Parameters: 
+2025-10-22 19:15:00.538 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.OrderMapper.selectList - <==      Total: 4
+2025-10-22 19:15:10.527 [http-nio-8082-exec-3] INFO  o.x.h.controller.OrderController - 获取订单列表 - customerId: null, status: null, pageNum: 1, pageSize: 10
+2025-10-22 19:15:10.529 [http-nio-8082-exec-3] DEBUG o.x.h.mapper.OrderMapper.selectList - ==>  Preparing: SELECT id,order_number,hotel_id,hotel_name,room_type_id,room_type_name,check_in_date,check_out_date,nights,guests,total_price,status,customer_name,customer_phone,customer_email,customer_id,create_time,update_time,deleted FROM orders WHERE deleted=0 ORDER BY create_time DESC
+2025-10-22 19:15:10.529 [http-nio-8082-exec-3] DEBUG o.x.h.mapper.OrderMapper.selectList - ==> Parameters: 
+2025-10-22 19:15:10.531 [http-nio-8082-exec-3] DEBUG o.x.h.mapper.OrderMapper.selectList - <==      Total: 4
+2025-10-22 19:15:58.531 [http-nio-8082-exec-4] INFO  o.x.h.controller.OrderController - 获取订单列表 - customerId: null, status: null, pageNum: 1, pageSize: 10
+2025-10-22 19:15:58.533 [http-nio-8082-exec-4] DEBUG o.x.h.mapper.OrderMapper.selectList - ==>  Preparing: SELECT id,order_number,hotel_id,hotel_name,room_type_id,room_type_name,check_in_date,check_out_date,nights,guests,total_price,status,customer_name,customer_phone,customer_email,customer_id,create_time,update_time,deleted FROM orders WHERE deleted=0 ORDER BY create_time DESC
+2025-10-22 19:15:58.533 [http-nio-8082-exec-4] DEBUG o.x.h.mapper.OrderMapper.selectList - ==> Parameters: 
+2025-10-22 19:15:58.536 [http-nio-8082-exec-4] DEBUG o.x.h.mapper.OrderMapper.selectList - <==      Total: 4
+2025-10-22 19:16:05.541 [http-nio-8082-exec-5] INFO  o.x.h.controller.OrderController - 获取订单列表 - customerId: null, status: null, pageNum: 1, pageSize: 10
+2025-10-22 19:16:05.545 [http-nio-8082-exec-5] DEBUG o.x.h.mapper.OrderMapper.selectList - ==>  Preparing: SELECT id,order_number,hotel_id,hotel_name,room_type_id,room_type_name,check_in_date,check_out_date,nights,guests,total_price,status,customer_name,customer_phone,customer_email,customer_id,create_time,update_time,deleted FROM orders WHERE deleted=0 ORDER BY create_time DESC
+2025-10-22 19:16:05.546 [http-nio-8082-exec-5] DEBUG o.x.h.mapper.OrderMapper.selectList - ==> Parameters: 
+2025-10-22 19:16:05.550 [http-nio-8082-exec-5] DEBUG o.x.h.mapper.OrderMapper.selectList - <==      Total: 4
+2025-10-22 19:16:11.520 [http-nio-8082-exec-6] INFO  o.x.h.controller.OrderController - 获取订单列表 - customerId: null, status: null, pageNum: 1, pageSize: 10
+2025-10-22 19:16:11.521 [http-nio-8082-exec-6] DEBUG o.x.h.mapper.OrderMapper.selectList - ==>  Preparing: SELECT id,order_number,hotel_id,hotel_name,room_type_id,room_type_name,check_in_date,check_out_date,nights,guests,total_price,status,customer_name,customer_phone,customer_email,customer_id,create_time,update_time,deleted FROM orders WHERE deleted=0 ORDER BY create_time DESC
+2025-10-22 19:16:11.522 [http-nio-8082-exec-6] DEBUG o.x.h.mapper.OrderMapper.selectList - ==> Parameters: 
+2025-10-22 19:16:11.524 [http-nio-8082-exec-6] DEBUG o.x.h.mapper.OrderMapper.selectList - <==      Total: 4
+2025-10-22 19:16:35.229 [http-nio-8082-exec-7] INFO  o.x.h.controller.OrderController - 获取订单列表 - customerId: null, status: null, pageNum: 1, pageSize: 10
+2025-10-22 19:16:35.231 [http-nio-8082-exec-7] DEBUG o.x.h.mapper.OrderMapper.selectList - ==>  Preparing: SELECT id,order_number,hotel_id,hotel_name,room_type_id,room_type_name,check_in_date,check_out_date,nights,guests,total_price,status,customer_name,customer_phone,customer_email,customer_id,create_time,update_time,deleted FROM orders WHERE deleted=0 ORDER BY create_time DESC
+2025-10-22 19:16:35.231 [http-nio-8082-exec-7] DEBUG o.x.h.mapper.OrderMapper.selectList - ==> Parameters: 
+2025-10-22 19:16:35.233 [http-nio-8082-exec-7] DEBUG o.x.h.mapper.OrderMapper.selectList - <==      Total: 4
+2025-10-22 19:17:29.534 [http-nio-8082-exec-8] INFO  o.x.h.controller.OrderController - 获取订单列表 - customerId: null, status: null, pageNum: 1, pageSize: 10
+2025-10-22 19:17:29.536 [http-nio-8082-exec-8] DEBUG o.x.h.mapper.OrderMapper.selectList - ==>  Preparing: SELECT id,order_number,hotel_id,hotel_name,room_type_id,room_type_name,check_in_date,check_out_date,nights,guests,total_price,status,customer_name,customer_phone,customer_email,customer_id,create_time,update_time,deleted FROM orders WHERE deleted=0 ORDER BY create_time DESC
+2025-10-22 19:17:29.536 [http-nio-8082-exec-8] DEBUG o.x.h.mapper.OrderMapper.selectList - ==> Parameters: 
+2025-10-22 19:17:29.538 [http-nio-8082-exec-8] DEBUG o.x.h.mapper.OrderMapper.selectList - <==      Total: 4
+2025-10-22 19:17:41.533 [http-nio-8082-exec-9] INFO  o.x.h.controller.OrderController - 获取订单列表 - customerId: null, status: null, pageNum: 1, pageSize: 10
+2025-10-22 19:17:41.534 [http-nio-8082-exec-9] DEBUG o.x.h.mapper.OrderMapper.selectList - ==>  Preparing: SELECT id,order_number,hotel_id,hotel_name,room_type_id,room_type_name,check_in_date,check_out_date,nights,guests,total_price,status,customer_name,customer_phone,customer_email,customer_id,create_time,update_time,deleted FROM orders WHERE deleted=0 ORDER BY create_time DESC
+2025-10-22 19:17:41.534 [http-nio-8082-exec-9] DEBUG o.x.h.mapper.OrderMapper.selectList - ==> Parameters: 
+2025-10-22 19:17:41.536 [http-nio-8082-exec-9] DEBUG o.x.h.mapper.OrderMapper.selectList - <==      Total: 4
+2025-10-22 19:17:44.520 [http-nio-8082-exec-10] INFO  o.x.h.controller.OrderController - 获取订单列表 - customerId: null, status: null, pageNum: 1, pageSize: 10
+2025-10-22 19:17:44.522 [http-nio-8082-exec-10] DEBUG o.x.h.mapper.OrderMapper.selectList - ==>  Preparing: SELECT id,order_number,hotel_id,hotel_name,room_type_id,room_type_name,check_in_date,check_out_date,nights,guests,total_price,status,customer_name,customer_phone,customer_email,customer_id,create_time,update_time,deleted FROM orders WHERE deleted=0 ORDER BY create_time DESC
+2025-10-22 19:17:44.522 [http-nio-8082-exec-10] DEBUG o.x.h.mapper.OrderMapper.selectList - ==> Parameters: 
+2025-10-22 19:17:44.527 [http-nio-8082-exec-10] DEBUG o.x.h.mapper.OrderMapper.selectList - <==      Total: 4
+2025-10-22 19:17:53.536 [http-nio-8082-exec-1] INFO  o.x.h.controller.OrderController - 获取订单列表 - customerId: null, status: null, pageNum: 1, pageSize: 10
+2025-10-22 19:17:53.538 [http-nio-8082-exec-1] DEBUG o.x.h.mapper.OrderMapper.selectList - ==>  Preparing: SELECT id,order_number,hotel_id,hotel_name,room_type_id,room_type_name,check_in_date,check_out_date,nights,guests,total_price,status,customer_name,customer_phone,customer_email,customer_id,create_time,update_time,deleted FROM orders WHERE deleted=0 ORDER BY create_time DESC
+2025-10-22 19:17:53.539 [http-nio-8082-exec-1] DEBUG o.x.h.mapper.OrderMapper.selectList - ==> Parameters: 
+2025-10-22 19:17:53.541 [http-nio-8082-exec-1] DEBUG o.x.h.mapper.OrderMapper.selectList - <==      Total: 4
+2025-10-22 19:20:31.599 [http-nio-8082-exec-3] INFO  o.x.h.controller.HotelController - 获取酒店列表 - cityCode: 010, brandCode: null, status: null
+2025-10-22 19:20:31.600 [http-nio-8082-exec-3] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==>  Preparing: SELECT * FROM jinjiang_hotels WHERE valid = 1
+2025-10-22 19:20:31.600 [http-nio-8082-exec-3] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==> Parameters: 
+2025-10-22 19:20:31.607 [http-nio-8082-exec-3] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - <==      Total: 5
+2025-10-22 19:20:31.614 [http-nio-8082-exec-4] INFO  o.x.h.controller.HotelController - 获取酒店列表 - cityCode: 010, brandCode: null, status: null
+2025-10-22 19:20:31.615 [http-nio-8082-exec-4] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==>  Preparing: SELECT * FROM jinjiang_hotels WHERE valid = 1
+2025-10-22 19:20:31.615 [http-nio-8082-exec-4] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==> Parameters: 
+2025-10-22 19:20:31.620 [http-nio-8082-exec-4] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - <==      Total: 5
+2025-10-22 19:20:39.646 [http-nio-8082-exec-5] INFO  o.x.h.controller.HotelController - 获取酒店列表 - cityCode: 010, brandCode: null, status: null
+2025-10-22 19:20:39.647 [http-nio-8082-exec-5] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==>  Preparing: SELECT * FROM jinjiang_hotels WHERE valid = 1
+2025-10-22 19:20:39.647 [http-nio-8082-exec-5] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==> Parameters: 
+2025-10-22 19:20:39.652 [http-nio-8082-exec-5] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - <==      Total: 5
+2025-10-22 19:20:52.521 [http-nio-8082-exec-6] INFO  o.x.h.controller.HotelController - 获取酒店列表 - cityCode: 010, brandCode: null, status: null
+2025-10-22 19:20:52.522 [http-nio-8082-exec-6] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==>  Preparing: SELECT * FROM jinjiang_hotels WHERE valid = 1
+2025-10-22 19:20:52.523 [http-nio-8082-exec-6] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==> Parameters: 
+2025-10-22 19:20:52.528 [http-nio-8082-exec-6] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - <==      Total: 5
+2025-10-22 19:21:28.657 [http-nio-8082-exec-7] INFO  o.x.h.controller.HotelController - 获取酒店列表 - cityCode: 010, brandCode: null, status: null
+2025-10-22 19:21:28.658 [http-nio-8082-exec-7] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==>  Preparing: SELECT * FROM jinjiang_hotels WHERE valid = 1
+2025-10-22 19:21:28.658 [http-nio-8082-exec-7] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - ==> Parameters: 
+2025-10-22 19:21:28.663 [http-nio-8082-exec-7] DEBUG o.x.h.mapper.JinjiangHotelMapper.selectAllHotels - <==      Total: 5
+2025-10-22 19:21:38.540 [http-nio-8082-exec-9] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 19:21:38.542 [http-nio-8082-exec-9] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 19:21:38.548 [http-nio-8082-exec-9] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 19:21:38.558 [http-nio-8082-exec-9] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 19:21:38.573 [http-nio-8082-exec-10] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 19:21:38.574 [http-nio-8082-exec-10] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 19:21:38.576 [http-nio-8082-exec-10] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 19:21:38.583 [http-nio-8082-exec-10] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 19:21:57.790 [http-nio-8082-exec-1] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 19:21:57.791 [http-nio-8082-exec-1] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 19:21:57.791 [http-nio-8082-exec-1] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 19:21:57.794 [http-nio-8082-exec-1] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 19:21:57.802 [http-nio-8082-exec-2] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 19:21:57.802 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 19:21:57.803 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 19:21:57.805 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 19:23:54.862 [http-nio-8082-exec-4] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 19:23:54.863 [http-nio-8082-exec-4] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 19:23:54.864 [http-nio-8082-exec-4] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 19:23:54.868 [http-nio-8082-exec-4] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 19:23:54.874 [http-nio-8082-exec-5] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 19:23:54.874 [http-nio-8082-exec-5] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 19:23:54.875 [http-nio-8082-exec-5] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 19:23:54.880 [http-nio-8082-exec-5] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 19:24:02.308 [http-nio-8082-exec-6] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 19:24:02.309 [http-nio-8082-exec-6] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 19:24:02.310 [http-nio-8082-exec-6] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 19:24:02.312 [http-nio-8082-exec-6] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 19:24:02.320 [http-nio-8082-exec-7] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 19:24:02.320 [http-nio-8082-exec-7] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 19:24:02.321 [http-nio-8082-exec-7] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 19:24:02.323 [http-nio-8082-exec-7] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 19:25:48.571 [http-nio-8082-exec-9] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 19:25:48.572 [http-nio-8082-exec-9] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 19:25:48.573 [http-nio-8082-exec-9] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 19:25:48.575 [http-nio-8082-exec-9] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 19:25:55.595 [http-nio-8082-exec-10] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 19:25:55.597 [http-nio-8082-exec-10] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 19:25:55.598 [http-nio-8082-exec-10] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 19:25:55.602 [http-nio-8082-exec-10] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 19:26:03.574 [http-nio-8082-exec-1] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 19:26:03.574 [http-nio-8082-exec-1] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 19:26:03.575 [http-nio-8082-exec-1] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 19:26:03.577 [http-nio-8082-exec-1] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 19:26:36.642 [http-nio-8082-exec-2] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 19:26:36.643 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 19:26:36.644 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 19:26:36.647 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 19:27:47.544 [http-nio-8082-exec-4] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 19:27:47.546 [http-nio-8082-exec-4] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 19:27:47.547 [http-nio-8082-exec-4] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 19:27:47.549 [http-nio-8082-exec-4] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 19:28:18.549 [http-nio-8082-exec-5] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 19:28:18.549 [http-nio-8082-exec-5] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 19:28:18.550 [http-nio-8082-exec-5] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 19:28:18.551 [http-nio-8082-exec-5] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 19:30:39.588 [http-nio-8082-exec-9] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 19:30:39.589 [http-nio-8082-exec-9] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 19:30:39.590 [http-nio-8082-exec-9] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 19:30:39.592 [http-nio-8082-exec-9] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 19:32:14.137 [http-nio-8082-exec-2] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 19:32:14.139 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 19:32:14.140 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 19:32:14.144 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 19:32:22.625 [http-nio-8082-exec-4] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 19:32:22.626 [http-nio-8082-exec-4] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 19:32:22.627 [http-nio-8082-exec-4] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 19:32:22.631 [http-nio-8082-exec-4] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 19:32:26.546 [http-nio-8082-exec-6] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 19:32:26.547 [http-nio-8082-exec-6] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 19:32:26.548 [http-nio-8082-exec-6] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 19:32:26.550 [http-nio-8082-exec-6] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 19:33:17.750 [http-nio-8082-exec-8] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 19:33:17.752 [http-nio-8082-exec-8] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 19:33:17.753 [http-nio-8082-exec-8] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 19:33:17.755 [http-nio-8082-exec-8] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 19:33:36.556 [http-nio-8082-exec-10] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 19:33:36.558 [http-nio-8082-exec-10] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 19:33:36.558 [http-nio-8082-exec-10] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 19:33:36.561 [http-nio-8082-exec-10] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 19:34:38.548 [http-nio-8082-exec-3] INFO  o.x.h.controller.HotelController - 获取酒店房型列表 - innId: H001
+2025-10-22 19:34:38.549 [http-nio-8082-exec-3] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==>  Preparing: SELECT * FROM jinjiang_room_types WHERE inn_id = ? AND valid = 1
+2025-10-22 19:34:38.549 [http-nio-8082-exec-3] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - ==> Parameters: H001(String)
+2025-10-22 19:34:38.554 [http-nio-8082-exec-3] DEBUG o.x.h.mapper.JinjiangRoomTypeMapper.selectByInnId - <==      Total: 3
+2025-10-22 19:44:54.309 [http-nio-8082-exec-8] INFO  o.x.h.controller.OrderController - 获取订单列表 - customerId: null, status: null, pageNum: 1, pageSize: 10
+2025-10-22 19:44:54.310 [http-nio-8082-exec-8] DEBUG o.x.h.mapper.OrderMapper.selectList - ==>  Preparing: SELECT id,order_number,hotel_id,hotel_name,room_type_id,room_type_name,check_in_date,check_out_date,nights,guests,total_price,status,customer_name,customer_phone,customer_email,customer_id,create_time,update_time,deleted FROM orders WHERE deleted=0 ORDER BY create_time DESC
+2025-10-22 19:44:54.310 [http-nio-8082-exec-8] DEBUG o.x.h.mapper.OrderMapper.selectList - ==> Parameters: 
+2025-10-22 19:44:54.312 [http-nio-8082-exec-8] DEBUG o.x.h.mapper.OrderMapper.selectList - <==      Total: 4
+2025-10-22 20:00:45.434 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 111 class path changes (0 additions, 111 deletions, 0 modifications)
+2025-10-22 20:00:45.484 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-10-22 20:00:45.509 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-10-22 20:02:03.802 [restartedMain] INFO  o.x.h.HotelPriceComparisonApplication - Starting HotelPriceComparisonApplication using Java 21.0.8 with PID 25964 (C:\Users\wangz\Hotel\HotelBack\build\classes\java\main started by wangz in C:\Users\wangz\Hotel\HotelBack)
+2025-10-22 20:02:03.806 [restartedMain] DEBUG o.x.h.HotelPriceComparisonApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+2025-10-22 20:02:03.808 [restartedMain] INFO  o.x.h.HotelPriceComparisonApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-22 20:02:03.954 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-22 20:02:03.954 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-22 20:02:07.923 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+2025-10-22 20:02:07.953 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-10-22 20:02:07.955 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2025-10-22 20:02:08.095 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-10-22 20:02:08.096 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4140 ms
+2025-10-22 20:02:09.283 [restartedMain] INFO  o.x.h.service.impl.JinjiangApiServiceImpl - RestTemplate超时配置已设置 - 连接超时: 5000ms, 读取超时: 10000ms
+2025-10-22 20:02:10.304 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-10-22 20:02:10.460 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path ''
+2025-10-22 20:02:10.491 [restartedMain] INFO  o.x.h.HotelPriceComparisonApplication - Started HotelPriceComparisonApplication in 8.011 seconds (process running for 9.385)
+2025-10-22 20:03:32.974 [restartedMain] INFO  o.x.h.HotelPriceComparisonApplication - Starting HotelPriceComparisonApplication using Java 21.0.8 with PID 14812 (C:\Users\wangz\Hotel\HotelBack\build\classes\java\main started by wangz in C:\Users\wangz\Hotel\HotelBack)
+2025-10-22 20:03:32.977 [restartedMain] DEBUG o.x.h.HotelPriceComparisonApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+2025-10-22 20:03:32.978 [restartedMain] INFO  o.x.h.HotelPriceComparisonApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-22 20:03:33.169 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-22 20:03:33.170 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-22 20:03:35.894 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+2025-10-22 20:03:35.925 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-10-22 20:03:35.926 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2025-10-22 20:03:36.028 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-10-22 20:03:36.029 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2857 ms
+2025-10-22 20:03:37.512 [restartedMain] INFO  o.x.h.service.impl.JinjiangApiServiceImpl - RestTemplate超时配置已设置 - 连接超时: 5000ms, 读取超时: 10000ms
+2025-10-22 20:03:38.449 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-10-22 20:03:38.581 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path ''
+2025-10-22 20:03:38.610 [restartedMain] INFO  o.x.h.HotelPriceComparisonApplication - Started HotelPriceComparisonApplication in 6.999 seconds (process running for 8.17)
+2025-10-22 20:06:29.713 [restartedMain] INFO  o.x.h.HotelPriceComparisonApplication - Starting HotelPriceComparisonApplication using Java 21.0.8 with PID 18092 (C:\Users\wangz\Hotel\HotelBack\build\classes\java\main started by wangz in C:\Users\wangz\Hotel\HotelBack)
+2025-10-22 20:06:29.718 [restartedMain] DEBUG o.x.h.HotelPriceComparisonApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+2025-10-22 20:06:29.719 [restartedMain] INFO  o.x.h.HotelPriceComparisonApplication - No active profile set, falling back to 1 default profile: "default"
+2025-10-22 20:06:29.861 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-10-22 20:06:29.861 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-10-22 20:06:33.275 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8082 (http)
+2025-10-22 20:06:33.302 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-10-22 20:06:33.302 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2025-10-22 20:06:33.388 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-10-22 20:06:33.389 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3527 ms
+2025-10-22 20:06:34.803 [restartedMain] INFO  o.x.h.service.impl.JinjiangApiServiceImpl - RestTemplate超时配置已设置 - 连接超时: 5000ms, 读取超时: 10000ms
+2025-10-22 20:06:36.107 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-10-22 20:06:36.255 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8082 (http) with context path ''
+2025-10-22 20:06:36.279 [restartedMain] INFO  o.x.h.HotelPriceComparisonApplication - Started HotelPriceComparisonApplication in 8.0 seconds (process running for 9.653)
+2025-10-22 20:06:53.475 [http-nio-8082-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-22 20:06:53.476 [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-10-22 20:06:53.478 [http-nio-8082-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-10-22 20:06:53.741 [http-nio-8082-exec-1] WARN  o.s.w.s.m.support.DefaultHandlerExceptionResolver - Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('\' (code 92)): was expecting double-quote to start field name]
+2025-10-22 20:06:59.751 [http-nio-8082-exec-2] INFO  o.x.h.controller.OrderController - 获取订单列表 - customerId: null, status: null, pageNum: 1, pageSize: 10
+2025-10-22 20:06:59.885 [http-nio-8082-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-10-22 20:07:00.238 [http-nio-8082-exec-2] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@31ad5bd6
+2025-10-22 20:07:00.242 [http-nio-8082-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-10-22 20:07:00.257 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.OrderMapper.selectList - ==>  Preparing: SELECT id,order_number,hotel_id,hotel_name,room_type_id,room_type_name,check_in_date,check_out_date,nights,guests,total_price,status,customer_name,customer_phone,customer_email,customer_id,create_time,update_time,deleted FROM orders WHERE deleted=0 ORDER BY create_time DESC
+2025-10-22 20:07:00.309 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.OrderMapper.selectList - ==> Parameters: 
+2025-10-22 20:07:00.370 [http-nio-8082-exec-2] DEBUG o.x.h.mapper.OrderMapper.selectList - <==      Total: 4
+2025-10-22 20:07:36.298 [scheduling-1] INFO  o.x.h.schedule.JinjiangDataSyncScheduler - 开始执行锦江数据同步任务...
+2025-10-22 20:07:36.298 [scheduling-1] INFO  o.x.h.schedule.JinjiangDataSyncScheduler - 开始同步品牌列表...
+2025-10-22 20:07:36.299 [scheduling-1] DEBUG o.x.h.service.impl.JinjiangApiServiceImpl - 开始调用供应商API获取品牌列表
+2025-10-22 20:07:36.317 [scheduling-1] INFO  org.xfy.hotelpricecomparison.util.LogUtil - 调用API: https://bizfzout.bestwehotel.com/proxy/ms-corp-directly-connect/brand/getBrandList, 请求参数: {"brandCode":"","languageCode":0}
+2025-10-22 20:07:36.317 [scheduling-1] WARN  o.x.h.service.impl.JinjiangApiServiceImpl - 品牌编码为空字符串
+2025-10-22 20:07:36.320 [scheduling-1] DEBUG o.xfy.hotelpricecomparison.util.FizzSignatureUtil - Fizz API签名生成 - 原始字符串: 924497e9-be62-4128-950d-f626657fcd64-1761134856317-65b299b0-27cb-4360-b181-accf1034bef2, 签名: a6473a791200974f77c720aad776f25841dfa7712fd12f65caad26a1a9eedfee
+2025-10-22 20:07:36.321 [scheduling-1] DEBUG o.x.h.service.impl.JinjiangApiServiceImpl - 发送API请求到: https://bizfzout.bestwehotel.com/proxy/ms-corp-directly-connect/brand/getBrandList
+2025-10-22 20:07:37.074 [scheduling-1] INFO  org.xfy.hotelpricecomparison.util.LogUtil - API响应: https://bizfzout.bestwehotel.com/proxy/ms-corp-directly-connect/brand/getBrandList, 响应内容: {"msgCode":403,"message":"218.17.40.85 not in 924497e9-be62-4128-950d-f626657fcd64 app white list","traceId":"fizz-25d15e96-28605050386"}
+2025-10-22 20:07:37.076 [scheduling-1] WARN  o.x.h.service.impl.JinjiangApiServiceImpl - API返回非成功状态码: 403, 消息: 218.17.40.85 not in 924497e9-be62-4128-950d-f626657fcd64 app white list
+2025-10-22 20:07:37.076 [scheduling-1] WARN  o.x.h.service.impl.JinjiangApiServiceImpl - API响应验证失败: https://bizfzout.bestwehotel.com/proxy/ms-corp-directly-connect/brand/getBrandList
+2025-10-22 20:07:37.077 [scheduling-1] WARN  o.x.h.schedule.JinjiangDataSyncScheduler - 品牌列表同步失败: 服务暂时不可用，返回默认数据
+2025-10-22 20:07:37.077 [scheduling-1] INFO  o.x.h.schedule.JinjiangDataSyncScheduler - 开始同步酒店ID列表...
+2025-10-22 20:07:37.077 [scheduling-1] DEBUG o.x.h.service.impl.JinjiangApiServiceImpl - 开始调用供应商API获取酒店ID列表 - 页码: 1, 每页数量: 10
+2025-10-22 20:07:37.083 [scheduling-1] INFO  org.xfy.hotelpricecomparison.util.LogUtil - 调用API: https://bizfzout.bestwehotel.com/proxy/ms-corp-directly-connect/hotel/getHotelIds, 请求参数: {"brandCodes":null,"pageNum":1,"pageSize":10}
+2025-10-22 20:07:37.084 [scheduling-1] DEBUG o.xfy.hotelpricecomparison.util.FizzSignatureUtil - Fizz API签名生成 - 原始字符串: 924497e9-be62-4128-950d-f626657fcd64-1761134857084-65b299b0-27cb-4360-b181-accf1034bef2, 签名: d9783c148487dac4ee8d3c2f8e6f6e34d357547802ee68ad031da9f24200b10c
+2025-10-22 20:07:37.084 [scheduling-1] DEBUG o.x.h.service.impl.JinjiangApiServiceImpl - 发送API请求到: https://bizfzout.bestwehotel.com/proxy/ms-corp-directly-connect/hotel/getHotelIds
+2025-10-22 20:07:37.135 [scheduling-1] INFO  org.xfy.hotelpricecomparison.util.LogUtil - API响应: https://bizfzout.bestwehotel.com/proxy/ms-corp-directly-connect/hotel/getHotelIds, 响应内容: {"msgCode":403,"message":"218.17.40.85 not in 924497e9-be62-4128-950d-f626657fcd64 app white list","traceId":"fizz-25d15e96-28605050418"}
+2025-10-22 20:07:37.136 [scheduling-1] WARN  o.x.h.service.impl.JinjiangApiServiceImpl - API返回非成功状态码: 403, 消息: 218.17.40.85 not in 924497e9-be62-4128-950d-f626657fcd64 app white list
+2025-10-22 20:07:37.136 [scheduling-1] WARN  o.x.h.service.impl.JinjiangApiServiceImpl - API响应验证失败: https://bizfzout.bestwehotel.com/proxy/ms-corp-directly-connect/hotel/getHotelIds
+2025-10-22 20:07:37.137 [scheduling-1] WARN  o.x.h.schedule.JinjiangDataSyncScheduler - 酒店ID列表同步失败: 服务暂时不可用，返回默认数据
+2025-10-22 20:07:37.137 [scheduling-1] INFO  o.x.h.schedule.JinjiangDataSyncScheduler - 锦江数据同步任务执行完成
+2025-10-22 20:08:37.138 [scheduling-1] INFO  o.x.h.schedule.JinjiangDataSyncScheduler - 开始执行锦江数据同步任务...
+2025-10-22 20:08:37.139 [scheduling-1] INFO  o.x.h.schedule.JinjiangDataSyncScheduler - 开始同步品牌列表...
+2025-10-22 20:08:37.139 [scheduling-1] DEBUG o.x.h.service.impl.JinjiangApiServiceImpl - 开始调用供应商API获取品牌列表
+2025-10-22 20:08:37.139 [scheduling-1] INFO  org.xfy.hotelpricecomparison.util.LogUtil - 调用API: https://bizfzout.bestwehotel.com/proxy/ms-corp-directly-connect/brand/getBrandList, 请求参数: {"brandCode":"","languageCode":0}
+2025-10-22 20:08:37.139 [scheduling-1] WARN  o.x.h.service.impl.JinjiangApiServiceImpl - 品牌编码为空字符串
+2025-10-22 20:08:37.139 [scheduling-1] DEBUG o.xfy.hotelpricecomparison.util.FizzSignatureUtil - Fizz API签名生成 - 原始字符串: 924497e9-be62-4128-950d-f626657fcd64-1761134917139-65b299b0-27cb-4360-b181-accf1034bef2, 签名: 7f7d30de2bec604fe396f32e54fc22fe4f47990c05a8ec83b9f939e08ec71368
+2025-10-22 20:08:37.139 [scheduling-1] DEBUG o.x.h.service.impl.JinjiangApiServiceImpl - 发送API请求到: https://bizfzout.bestwehotel.com/proxy/ms-corp-directly-connect/brand/getBrandList
+2025-10-22 20:08:37.248 [scheduling-1] INFO  org.xfy.hotelpricecomparison.util.LogUtil - API响应: https://bizfzout.bestwehotel.com/proxy/ms-corp-directly-connect/brand/getBrandList, 响应内容: {"msgCode":403,"message":"218.17.40.12 not in 924497e9-be62-4128-950d-f626657fcd64 app white list","traceId":"fizz-e25ed397-28605082523"}
+2025-10-22 20:08:37.249 [scheduling-1] WARN  o.x.h.service.impl.JinjiangApiServiceImpl - API返回非成功状态码: 403, 消息: 218.17.40.12 not in 924497e9-be62-4128-950d-f626657fcd64 app white list
+2025-10-22 20:08:37.249 [scheduling-1] WARN  o.x.h.service.impl.JinjiangApiServiceImpl - API响应验证失败: https://bizfzout.bestwehotel.com/proxy/ms-corp-directly-connect/brand/getBrandList
+2025-10-22 20:08:37.249 [scheduling-1] WARN  o.x.h.schedule.JinjiangDataSyncScheduler - 品牌列表同步失败: 服务暂时不可用，返回默认数据
+2025-10-22 20:08:37.249 [scheduling-1] INFO  o.x.h.schedule.JinjiangDataSyncScheduler - 开始同步酒店ID列表...
+2025-10-22 20:08:37.249 [scheduling-1] DEBUG o.x.h.service.impl.JinjiangApiServiceImpl - 开始调用供应商API获取酒店ID列表 - 页码: 1, 每页数量: 10
+2025-10-22 20:08:37.250 [scheduling-1] INFO  org.xfy.hotelpricecomparison.util.LogUtil - 调用API: https://bizfzout.bestwehotel.com/proxy/ms-corp-directly-connect/hotel/getHotelIds, 请求参数: {"brandCodes":null,"pageNum":1,"pageSize":10}
+2025-10-22 20:08:37.250 [scheduling-1] DEBUG o.xfy.hotelpricecomparison.util.FizzSignatureUtil - Fizz API签名生成 - 原始字符串: 924497e9-be62-4128-950d-f626657fcd64-1761134917250-65b299b0-27cb-4360-b181-accf1034bef2, 签名: ac6df3ea32921e419f0723b3cdfd782e35ec131baab7405c0a39f1fe195b09a6
+2025-10-22 20:08:37.250 [scheduling-1] DEBUG o.x.h.service.impl.JinjiangApiServiceImpl - 发送API请求到: https://bizfzout.bestwehotel.com/proxy/ms-corp-directly-connect/hotel/getHotelIds
+2025-10-22 20:08:37.294 [scheduling-1] INFO  org.xfy.hotelpricecomparison.util.LogUtil - API响应: https://bizfzout.bestwehotel.com/proxy/ms-corp-directly-connect/hotel/getHotelIds, 响应内容: {"msgCode":403,"message":"218.17.40.12 not in 924497e9-be62-4128-950d-f626657fcd64 app white list","traceId":"fizz-470e25be-22686975854"}
+2025-10-22 20:08:37.294 [scheduling-1] WARN  o.x.h.service.impl.JinjiangApiServiceImpl - API返回非成功状态码: 403, 消息: 218.17.40.12 not in 924497e9-be62-4128-950d-f626657fcd64 app white list
+2025-10-22 20:08:37.294 [scheduling-1] WARN  o.x.h.service.impl.JinjiangApiServiceImpl - API响应验证失败: https://bizfzout.bestwehotel.com/proxy/ms-corp-directly-connect/hotel/getHotelIds
+2025-10-22 20:08:37.295 [scheduling-1] WARN  o.x.h.schedule.JinjiangDataSyncScheduler - 酒店ID列表同步失败: 服务暂时不可用，返回默认数据
+2025-10-22 20:08:37.295 [scheduling-1] INFO  o.x.h.schedule.JinjiangDataSyncScheduler - 锦江数据同步任务执行完成
